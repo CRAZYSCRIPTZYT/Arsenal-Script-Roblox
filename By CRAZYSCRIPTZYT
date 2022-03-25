@@ -1,0 +1,43 @@
+local ScreenGui = Instance.new("ScreenGui")
+local DRAG = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+DRAG.Name = "DRAG"
+DRAG.Parent = ScreenGui
+DRAG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DRAG.Position = UDim2.new(0.331858397, 0, 0.316120893, 0)
+DRAG.Size = UDim2.new(0, 274, 0, 72)
+DRAG.Active = true
+DRAG.Draggable = true
+
+TextLabel.Parent = DRAG
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 149, 29)
+TextLabel.Size = UDim2.new(0, 274, 0, 72)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "CRAZY SCRIPTZ"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 50.000
+
+Frame.Parent = DRAG
+Frame.BackgroundColor3 = Color3.fromRGB(136, 28, 225)
+Frame.Position = UDim2.new(-0.000258475542, 0, 0.996676445, 0)
+Frame.Size = UDim2.new(0, 275, 0, 388)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(25, 173, 25)
+TextButton.Position = UDim2.new(0.13454546, 0, 0.270618528, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 192)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "CLICK"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 69.000
+TextButton.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HonestlyDex/DexHub/main/V3.lua"))()
+end)
